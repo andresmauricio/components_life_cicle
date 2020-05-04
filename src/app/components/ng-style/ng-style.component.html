@@ -1,0 +1,5 @@
+<h1 [ngStyle]="{'font-size': fontSize + 'px'}">Primera forma</h1>
+<h2 [style.fontSize.px]="otherSize">Segunda forma</h2>
+
+<button (click)="otherSize = otherSize + 5">+</button>
+<button (click)="otherSize = otherSize - 5">-</button>

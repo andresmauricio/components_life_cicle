@@ -1,0 +1,28 @@
+<h3>Ng Class</h3>
+<div [ngClass]="classDanger" class="alert" role="alert">
+    A simple primary alert—check it out!
+</div>
+
+<button (click)="classDanger = 'alert-info'" class="btn btn-info">info</button>
+<button (click)="classDanger = 'alert-warning'" class="btn btn-warning">success</button>
+
+<br><br>
+
+<h3 [ngClass]="{'text-danger': isDanger.danger, 'text-info': !isDanger.danger}">
+    Texto
+</h3>
+
+<button 
+    [ngClass]="{'btn-danger': isDanger.danger, 'btn-info': !isDanger.danger}" 
+    class="btn" (click)="isDanger.danger = !isDanger.danger">Cambiar
+</button>
+
+<br><br>
+
+<h3>Proceso Asíncrono</h3>
+
+<button class="btn btn-primary"  [disabled]="loading" (click)="handlerprocess()">
+    <i [ngClass]="{'fa-save': !loading, 'fa-refresh fa-spin': loading}" 
+        class="fa"></i>
+    Guardar cambios
+</button>
